@@ -5,8 +5,19 @@
 **Section:** CSE-DS-2B  
 **Course:** Backend Development Fundamentals
 
-## Live link
-Not deployed yet. SQLite is stored in a local database file. For deployment, configure a persistent disk and set `DB_PATH` to a path on that disk; an ephemeral deployment filesystem may lose database changes after restart.
+## 🌐 Live Deployment (Render)
+
+* **Live Base URL:** [https://eswar-bdf-lab2.onrender.com](https://eswar-bdf-lab2.onrender.com)
+
+| Method | Endpoint | Live URL | Success Status | Description |
+|:---:|---|---|:---:|---|
+| `GET` | `/` | [https://eswar-bdf-lab2.onrender.com/](https://eswar-bdf-lab2.onrender.com/) | `200 OK` | API health check and overview |
+| `GET` | `/books/` | [https://eswar-bdf-lab2.onrender.com/books/](https://eswar-bdf-lab2.onrender.com/books/) | `200 OK` | Retrieve all 10 books |
+| `GET` | `/books/:bookId/` | [https://eswar-bdf-lab2.onrender.com/books/1/](https://eswar-bdf-lab2.onrender.com/books/1/) | `200 OK` | Retrieve single book by ID |
+| `POST` | `/books/` | `https://eswar-bdf-lab2.onrender.com/books/` | `201 Created` | Add a new book (JSON body) |
+| `PUT` | `/books/:bookId/` | `https://eswar-bdf-lab2.onrender.com/books/1/` | `200 OK` | Update an existing book (JSON body) |
+| `DELETE` | `/books/:bookId/` | `https://eswar-bdf-lab2.onrender.com/books/1/` | `200 OK` | Delete a book by ID |
+| `GET` | `/books/999/` | [https://eswar-bdf-lab2.onrender.com/books/999/](https://eswar-bdf-lab2.onrender.com/books/999/) | `404 Not Found` | Error case: Not found |
 
 ## Objective
 Connect an Express server to SQLite and expose five CRUD operations over HTTP.

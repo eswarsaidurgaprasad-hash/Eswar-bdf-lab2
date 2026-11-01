@@ -18,16 +18,21 @@ Connect an Express.js server to an SQLite database and implement full CRUD opera
 
 ---
 
+## 🌐 Live Deployment on Render
+
+* **Live Base URL:** [https://eswar-bdf-lab2.onrender.com](https://eswar-bdf-lab2.onrender.com)
+
 ## ⚡ CRUD Endpoints
 
-| Method | Endpoint | Description | Success Status |
-|:---:|---|---|:---:|
-| `GET` | `/books/` | Retrieve all books from database | `200 OK` |
-| `GET` | `/books/:bookId/` | Retrieve a single book by ID | `200 OK` |
-| `POST` | `/books/` | Add a new book to the database | `201 Created` |
-| `PUT` | `/books/:bookId/` | Update an existing book's details | `200 OK` |
-| `DELETE` | `/books/:bookId/` | Delete a book by ID | `200 OK` |
-| `GET` | `/books/999/` | Error case: Not Found | `404 Not Found` |
+| Method | Endpoint | Live URL | Success Status | Description |
+|:---:|---|---|:---:|---|
+| `GET` | `/` | [https://eswar-bdf-lab2.onrender.com/](https://eswar-bdf-lab2.onrender.com/) | `200 OK` | API health check & route listing |
+| `GET` | `/books/` | [https://eswar-bdf-lab2.onrender.com/books/](https://eswar-bdf-lab2.onrender.com/books/) | `200 OK` | Retrieve all 10 books from SQLite |
+| `GET` | `/books/:bookId/` | [https://eswar-bdf-lab2.onrender.com/books/1/](https://eswar-bdf-lab2.onrender.com/books/1/) | `200 OK` | Retrieve single book by ID |
+| `POST` | `/books/` | `https://eswar-bdf-lab2.onrender.com/books/` | `201 Created` | Add a new book (with JSON body) |
+| `PUT` | `/books/:bookId/` | `https://eswar-bdf-lab2.onrender.com/books/1/` | `200 OK` | Update an existing book's details |
+| `DELETE` | `/books/:bookId/` | `https://eswar-bdf-lab2.onrender.com/books/1/` | `200 OK` | Delete a book by ID |
+| `GET` | `/books/999/` | [https://eswar-bdf-lab2.onrender.com/books/999/](https://eswar-bdf-lab2.onrender.com/books/999/) | `404 Not Found` | Error case: Book not found |
 
 ---
 
