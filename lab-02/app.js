@@ -55,6 +55,21 @@ async function initializeDBAndServer() {
       }
     }
 
+    // Root welcome route for health check and API overview
+    app.get("/", (req, res) => {
+      res.status(200).json({
+        message: "Lab 2: SQLite database and CRUD API is running!",
+        author: "Y. Eswar Sai Durga Prasad",
+        endpoints: {
+          getAllBooks: "GET /books/",
+          getBookById: "GET /books/:bookId/",
+          addBook: "POST /books/",
+          updateBook: "PUT /books/:bookId/",
+          deleteBook: "DELETE /books/:bookId/"
+        }
+      });
+    });
+
     app.get("/books/", async (req, res) => {
       try {
         const books = await db.all("SELECT * FROM book ORDER BY id");

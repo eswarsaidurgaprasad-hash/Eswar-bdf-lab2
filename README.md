@@ -34,3 +34,4 @@ Connect an Express.js server to an SQLite database and implement full CRUD opera
 ## 📁 Project Structure
 
 * [`lab-02/`](lab-02/) — Complete source code (`app.js`, database files, tests, and execution screenshots).
+
