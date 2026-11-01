@@ -1,0 +1,9 @@
+{
+  "name": "eswar-bdf-lab2-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "cd lab-02 && npm install",
+    "start": "cd lab-02 && node app.js"
+  }
+}
